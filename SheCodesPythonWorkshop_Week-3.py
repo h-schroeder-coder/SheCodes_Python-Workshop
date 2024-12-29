@@ -43,15 +43,16 @@
 #display_current_weather("Wichita", "5", "")
 
 # lesson 5
-def calculate_farenheit (temperature_celcius) :
-  """Return the Farenheit value of a celcius temperature"""
-  temperature_farenheit = (float(temperature_celcius) * 9 / 5) +32
+#def calculate_farenheit (temperature_celcius) :
+#  """Return the Farenheit value of a celcius temperature"""
+#  temperature_farenheit = (float(temperature_celcius) * 9 / 5) +32
   
-  return temperature_farenheit
+#  return temperature_farenheit
 
-temperature_celcius = 15
+#temperature_celcius = 15
 
-temperature_farenheit = calculate_farenheit(temperature_celcius)
-city = "London"
+#temperature_farenheit = calculate_farenheit(temperature_celcius)
+#city = "London"
 
-print(f"It is currently {temperature_celcius}ºC ({temperature_farenheit}ºF) in {city}")
+#print(f"It is currently {temperature_celcius}ºC ({temperature_farenheit}ºF) in {city}")
+
