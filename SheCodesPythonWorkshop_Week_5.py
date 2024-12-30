@@ -1,4 +1,3 @@
-
 ## lesson 2
 
 # Import datetime
@@ -48,5 +47,18 @@ print(photo["thumbnailUrl"])
 # lesson 5
 
 #Create a Repl
+#done
 #Display the current weather humidity in Tokyo, such as:
 #It is currently 10ºC in Tokyo, Japan and the humidity level is 40%
+
+city = "Tokyo"
+api_key = "dfc9t54e5b10fea0dcae14f3826ob4e6"
+api_url = f"https://api.shecodes.io/weather/v1/current?query={city}&key={api_key}&units=imperial"
+
+response = requests.get(api_url)
+weather = response.json()
+temperature = round(weather["temperature"]["current"])
+country = weather["country"]
+humidity = weather["temperature"]["humidity"]
+
+print(f"It is currently {temperature}ºF in {city}, {country} and the humidity level is {humidity}%")
