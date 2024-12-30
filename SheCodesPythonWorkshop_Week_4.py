@@ -27,3 +27,21 @@
 #  index = index + 1
 
 # lesson 4
+  # Create a dictionary of 3 countries you’d like to visit as a key and their capital city a value
+countries = {"France": "Paris", "Ireland": "Dublin", "Italy": "Rome", "Greece": "Athens", "Spain": "Madrid"}
+  # Print out the dictionary
+print(countries) 
+  # Remove your least favorite country from the dictionary
+del countries["Spain"]
+  # Print out the dictionary
+print(countries)
+  # Add another country you'd like to visit 
+countries["Egypt"] = "Cairo"
+  # Print out the dictionary
+print(countries)
+  # Display the capital of each country (one at a time, don't use a loop)
+print(countries["Egypt"])
+print(countries["France"])
+print(countries["Ireland"])
+print(countries["Greece"])
+print(countries["Italy"])
