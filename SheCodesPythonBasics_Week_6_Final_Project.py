@@ -2,6 +2,9 @@ from rich import print
 import requests
 from datetime import datetime
 
+def show_temp(day, temperature, unit='F') :
+    """Shows temperatures with a day"""
+    print(f"[blue]{day}[/blue]: {round(temperature)}º{unit}")
 
 def show_current_weather(city): 
     """Shows details of current weather given a city input"""
@@ -15,8 +18,8 @@ def show_current_weather(city):
     city_name = weather["city"]
     country = weather["country"]
     
-    print(f"The temperature in {city_name}, {country} is {temperature}ºF")
-
+    print(f"[blue]Currently,[/blue] the temperature in {city_name}, {country} is {temperature}ºF")
+    
 def show_forecast_weather(city):
     """Shows details of the future weather forecast given a city input"""
     api_key = "dfc9t54e5b10fea0dcae14f3826ob4e6"
@@ -24,10 +27,7 @@ def show_forecast_weather(city):
 
     response = requests.get(api_url)
     weather_forecast = response.json()
-    #min_temperature = round(weather_forecast["daily"]["temperature"]["minimum"])
-    #max_temperature = round(weather_forecast["daily"]["temperature"]["maximum"])
-    city_name = weather_forecast["city"]
-    country = weather_forecast["country"]
+    print("\n[cyan bold]Forecast: [/cyan bold]")
     
     for day in weather_forecast["daily"]:
        timestamp = day["time"]
@@ -35,16 +35,25 @@ def show_forecast_weather(city):
        date = datetime.fromtimestamp(timestamp)
        formatted_day = date.strftime("%A")
        temperature = day["temperature"]["day"]
-       print(f"{formatted_day}: {round(temperature)}ºF")
        
-    
-        #print(f"The weather forecast for {city_name}, {country} includes a low temperature of {min_temperature}ºF and a high temperature of {max_temperature}ºF)
+       if date.date() != datetime.today().date() :
+           show_temp(formatted_day, round(temperature))
 
+def show_welcome():
+    """Shows welcome message"""
+    print("[cyan bold]Welcome to my weather app[/cyan bold]")
+
+def show_credit():
+    """Shows credit message"""
+    print("\n[green] This app was built by Hannah Schroeder[/green]")
+
+show_welcome()
 city_name = input("Enter a city: ")
 city_name = city_name.strip()
     
 if city_name: 
     show_current_weather(city_name)
     show_forecast_weather(city_name)
+    show_credit()
 else: 
     print("Please enter a city" )
