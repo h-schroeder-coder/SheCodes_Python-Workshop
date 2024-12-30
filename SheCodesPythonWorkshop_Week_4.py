@@ -18,10 +18,12 @@
 # Print out the list
 ##print(countries)
 
-#lesson 3
-countries = ["France", "Italy", "Ireland", "Greece"]
+# lesson 3
+#countries = ["France", "Italy", "Ireland", "Greece"]
 
-index = 0
-for country in countries: 
-  print(f"My number {index + 1} country is {country.title()}.")
-  index = index + 1
+#index = 0
+#for country in countries: 
+#  print(f"My number {index + 1} country is {country.title()}.")
+#  index = index + 1
+
+# lesson 4
