@@ -1,19 +1,21 @@
 # lesson 2
 # Create a list of 3 countries you’d like to visit
-countries = ["France", "Italy", "Ireland"]
+##countries = ["France", "Italy", "Ireland"]
 # Print out the list
-print(countries)
+##print(countries)
 # Remove the last country
-countries.pop()
+##countries.pop()
 # Print out the list
-print(countries)
+##print(countries)
 # Add another element at the beginning of the list
-countries.append("Greece")
+##countries.append("Greece")
 # Print out the list
-print(countries)
+##print(countries)
 # Print out the length of the list
-print(len(countries))
+##print(len(countries))
 # Sort the list 
-countries.sort()
+##countries.sort()
 # Print out the list
-print(countries)
+##print(countries)
+
+#lesson 3
