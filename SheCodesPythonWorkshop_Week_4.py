@@ -47,10 +47,10 @@
 #print(countries["Italy"])
 
 # lesson 5
-countries = {"France": "Paris", "Ireland": "Dublin", "Italy": "Rome", "Greece": "Athens", "Spain": "Madrid"}
+#countries = {"France": "Paris", "Ireland": "Dublin", "Italy": "Rome", "Greece": "Athens", "Spain": "Madrid"}
 
-index = 0
-print("Countries I'd like to visit:")
-for country, capital in countries.items(): 
-  print(f"{index +1}. {country} (Capital city: {capital})")
-  index = index + 1
+#index = 0
+#print("Countries I'd like to visit:")
+#for country, capital in countries.items(): 
+#  print(f"{index +1}. {country} (Capital city: {capital})")
+#  index = index + 1
