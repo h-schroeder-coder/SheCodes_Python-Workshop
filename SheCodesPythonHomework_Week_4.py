@@ -1,4 +1,10 @@
 # Exercise 1
+
+def convert_temps_f (temperature_celcius):
+    temperature_farenheit = (temperature_celcius * 9 / 5) +32
+    return temperature_farenheit
+
+
 weather = {
   "city":"Lisbon",
   "country":"Portugal",
@@ -6,19 +12,14 @@ weather = {
   "humidity":77
 }
 
-def round_temps_c (temperature_celcius):
-    temperature_celcius = weather["temperature"]
-    return round({temperature_celcius})
+city = weather["city"]
+country = weather["country"]
+temperature = weather["temperature"]
+humidity = weather["humidity"]
+temperature_farenheit = convert_temps_f(temperature)
 
-def round_temps_f (temperature_celcius):
-    temperature_celcius = weather["temperature"]
-    temperature_farenheit = ({temperature_celcius} * 9 / 5) +32
-    return round({temperature_farenheit})
 
-round_temps_c(temperature_celcius)
-round_temps_f(temperature_celcius)
-
-print(f"{round_temps_c(weather["temperature"])}ºC ({round_temps_f(weather["temperature"])}ºF) in {weather["city"]}, {weather["country"]}, the humidity level is {weather["humidity"]}%.")
+print(f"It is {round(temperature)}ºC ({round(temperature_farenheit)}ºF) in {city}, {country}, the humidity level is {humidity}%.")
 
 
 
@@ -48,4 +49,13 @@ forecast = {
 # Day 4: 11ºC
 # Day 5: 14ºC
 
-print(forecast["daily"])
+city = forecast["city"]
+country = forecast["country"]
+
+print(f" The forecast {city}, {country} for the next 5 days is:")
+
+index = 0
+for temperature in forecast["daily"]:
+    temperature_farenheit = round(convert_temps_f(temperature))
+    print(f"Day {index +1}: {round(temperature)}ºC ({round(temperature_farenheit)}ºF)")
+    index = index + 1
